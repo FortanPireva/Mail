@@ -36,10 +36,11 @@ public class MailService {
 
         try {
             MimeMessage message= new MimeMessage(session);
+
             message.setFrom(new InternetAddress("spicegios@gmail.com"));
             message.setRecipients(MimeMessage.RecipientType.TO,InternetAddress.parse(order.getUser().getEmail()));
             message.setSubject("Porosia në Spicegios Restaurant");
-            message.setContent(renderHtml(order),"text/html");
+            message.setContent(renderHtml(order),"text/html;charset=UTF-8");
 Transport.send(message);
             return true;
 
@@ -113,7 +114,7 @@ Transport.send(message);
                 "      <th>Sasia</th>\n" +
                 "      <th>Total</th>\n" + content+
                 "      <tr>\n" +
-                "        <td colspan=\"5\" style=\"text-align: center; font-size: 30px;\">Total:"+total+"</td>\n" +
+                "        <td colspan=\"5\" style=\"text-align: center; font-size: 30px;\">Total:"+total+"€</td>\n" +
                 "      </tr>\n" +
                 "    </table>\n" +
                 "  </body>\n" +
