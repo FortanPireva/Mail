@@ -58,7 +58,7 @@ Transport.send(message);
              order.getProducts()) {
             var subtotal=p.getProductInfo().getPrice()*p.getQuantity();
             total+=(p.getProductInfo().getPrice()*p.getQuantity());
-            content+="<tr><td><img src="+p.getProductInfo().getImageUrl()+"/></td>"
+            content+="<tr><td><img width=\"70\" height=\"60\" src="+p.getProductInfo().getImageUrl()+"/></td>"
                     +"<td>"+p.getProductInfo().getTitle()+"</td>"
                     +"<td>"+p.getProductInfo().getPrice()+"€</td>"
                     +"<td>"+p.getQuantity()+"</td>"
