@@ -104,7 +104,7 @@ Transport.send(message);
                 "    </style>\n" +
                 "  </head>\n" +
                 "  <body>\n" +
-                "    <h1>I nderuar"+order.getUser().getFullName()+"</h1>\n" +
+                "    <h1>I nderuar "+order.getUser().getFullName()+"</h1>\n" +
                 "    <p>Më poshtë gjeni përmbledhjen e porosisë suaj</p>\n" +
                 "    <table id=\"order\">\n" +
                 "      <th style=\"width: 100px;\"></th>\n" +
